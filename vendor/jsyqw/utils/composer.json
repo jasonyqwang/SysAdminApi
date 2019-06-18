@@ -1,0 +1,33 @@
+{
+    "name": "jsyqw/utils",
+    "description": "工具助手",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Wang",
+            "email": "jasonwang1211@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Jsyqw\\Utils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jsyqw\\PHPUnit\\": "tests/"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.5.x-dev"
+    }
+}

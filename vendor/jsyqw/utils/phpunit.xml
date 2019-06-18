@@ -1,0 +1,39 @@
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+    backupGlobals="true"
+    backupStaticAttributes="false"
+    bootstrap="tests/autoload.php"
+    cacheTokens="false"
+    colors="false"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    forceCoversAnnotation="false"
+    mapTestClassNameToCoveredClassName="false"
+    processIsolation="false"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    timeoutForSmallTests="1"
+    timeoutForMediumTests="10"
+    timeoutForLargeTests="60"
+    verbose="false">
+    <testsuites>
+        <testsuite name="JBZoo Utils Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-html" target="build/phpunit" lowUpperBound="80" highLowerBound="95"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" showOnlySummary="false"/>
+    </logging>
+    <!-- ... -->
+</phpunit>
